@@ -95,6 +95,6 @@ var tri = new Triangle(300, 301, 'f3000', 302, 303, 304, 305);
 
 
 
-// console.log(rect.toString());
-// console.log(circle.toString());
-// console.log(Triangle.toString());
+console.log(rect.toString());
+console.log(circle.toString());
+console.log(Triangle.toString());
