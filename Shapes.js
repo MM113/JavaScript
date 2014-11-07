@@ -42,13 +42,13 @@ var Rectangle = (function() {
     return Rectangle;
 })();
 
-var Circ = (function() {
-    function Circ(x, y, color, r) {
+var Circle = (function() {
+    function circle(x, y, color, r) {
         Shape.call(this, x, y, color);
         this._r = r;
     }
-    Circ.prototype = new Shape();
-    Circ.prototype.draw = function() {
+    circle.prototype = new Shape();
+    circle.prototype.draw = function() {
 
         this.canvas().element.beginPath();
         this.canvas().element.arc(this._x, this._y, this._r , 0, 2 * Math.PI);
@@ -58,23 +58,23 @@ var Circ = (function() {
 
     };
 
-    Circ.prototype.toString = function() {
+    circle.prototype.toString = function() {
         var stringed = Shape.prototype.toString.call(this) +
             ", radius: " + this._r;
         return stringed;
     };
-    return Circ;
+    return circle;
 })();
 
-var Tri = (function() {
-    var Tri = function(x, y, color, x2, y2, x3, y3) {
+var Triangle = (function() {
+    var Triangle = function(x, y, color, x2, y2, x3, y3) {
         Shape.call(this, x, y, color);
         this._x2 = x2;
         this._x3 = x3;
         this._y2 = y2;
         this._y3 = y3;
     };
-    Tri.prototype = {
+    Triangle.prototype = {
         toString: function() {
             var stringed = Shape.prototype.toString.call(this) +
                 ", x2: " + this._x2 + ", y2: " + this._y2 +
@@ -85,16 +85,16 @@ var Tri = (function() {
             //TODO
         }
     };
-    return Tri;
+    return Triangle;
 })();
 
 
 var rect = new Rectangle(10, 10, 'darkgreen', 300, 1000);
-var circ = new Circ(123, 233, 'white', 63);
-var tri = new Tri(300, 301, 'f3000', 302, 303, 304, 305);
+var circ = new Circle(123, 233, 'white', 63);
+var tri = new Triangle(300, 301, 'f3000', 302, 303, 304, 305);
 
 
 
 // console.log(rect.toString());
-// console.log(circ.toString());
-// console.log(tri.toString());
+// console.log(circle.toString());
+// console.log(Triangle.toString());
