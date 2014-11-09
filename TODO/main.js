@@ -95,7 +95,7 @@ Item.prototype = {
 
 //------EXECUTION------
 
-var list = new List();
+var list = new List();						//The script doesnt take input from the html ...yet
 list.addToDom();
 
 var section = list.addSection('Shop');
@@ -103,3 +103,5 @@ section.addToDom();
 
 var item = section.addItem("Buy vero");
 item.addToDom();
+
+//-----UNFINISHED-------
