@@ -93,7 +93,7 @@ Item.prototype = {
 //------EXECUTION------
 
 var list = new List(); //The script doesnt take input from the html ...yet
-list.addToDom();	   //functionality remains to be added...
+list.addToDom();	   //functionality remains to be added ...
 
 var section = list.addSection('Shop');
 section.addToDom();
