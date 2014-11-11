@@ -76,35 +76,39 @@ Section.prototype = {
 
 //------ITEM-------
 
-var Item = function(content, sectionTitle) {
+var Item = function(content, title) {
+	this._title = title;
     this._content = content;
-    this._title = sectionTitle;
+
 };
-Item.prototype = {
-    addToDom: function() {
+Item.prototype.addToDom = function() {
         var ul = document.getElementById(this._title + " List");
         var li = document.createElement("LI");
         li.innerHTML = this._content;
 
         ul.appendChild(li);
-    }
-};
+    };
 
 //------EXECUTION------
-
 var list = new List(); //The script doesnt take input from the html ...yet
+<<<<<<< Updated upstream
 list.addToDom();	   //functionality remains to be added ...
+=======
+// list.addToDom(); //functionality remains to be added...
+>>>>>>> Stashed changes
 
 var section = list.addSection('Shop');
-section.addToDom();
+// section.addToDom();
 
 var item = section.addItem("Buy vero!");
-item.addToDom();
+// item.addToDom();
 
 var section2 = list.addSection('At work');
-section2.addToDom();
+// section2.addToDom();
 
 var item2 = section2.addItem("Do something!");
-item2.addToDom();
+// item2.addToDom();
+
+console.log(item2);
 
 //-----UNFINISHED-------
