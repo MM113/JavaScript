@@ -1,4 +1,4 @@
-JS-Homework
+JavaScript
 ===========
 
  TEST REPO
